@@ -196,6 +196,7 @@ class Cadastrar(object):
         valor = self.QLineValor.text()
         valor = valor.replace('R$', '')
         valor = valor.replace(',00', '')
+        valor = valor.replace('.', '')
         return valor
         
     def insert_data(self):
@@ -206,13 +207,13 @@ class Cadastrar(object):
         
     def verify_carac_desc(self):
         descricao = self.plainDescricao.toPlainText()
-        tam = int(len(descricao)) - 1
+        tam = int(len(descricao))
         self.label_5.setText("Caracteres: "+str(tam))
         
         
     def verify_limit_desc(self):
         descricao = self.plainDescricao.toPlainText()
-        tam = int(len(descricao)) - 1
+        tam = int(len(descricao))
         cond = True
         if tam > 255:
             cond = False
@@ -246,9 +247,7 @@ class Cadastrar(object):
         self.show_list()
         self.Form.close()
         
-    
- 
-        
+           
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Cadastrar"))
