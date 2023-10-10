@@ -16,5 +16,3 @@
 - Quando cadastrar um novo produto é para abrir a listagem automaticamente
 - Deve existir um botão para cadastrar um novo produto a partir da listagem
 
-python -m PyQt5.uic.pyuic -x listagem.ui -o listagem.py
-python -m PyQt5.uic.pyuic -x teste.ui -o teste.py
