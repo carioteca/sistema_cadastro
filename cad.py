@@ -163,7 +163,7 @@ class Cadastrar(object):
     def show_alert_empty(self):
         alert = QMessageBox()
         alert.setWindowTitle('Aviso')
-        alert.setText('Campo vázio, por favor, verifique!')
+        alert.setText('Campo vazio, por favor, verifique!')
         alert.setIcon(QMessageBox.Warning)  # Você pode alterar o ícone (Information, Warning, Critical)
         alert.setStandardButtons(QMessageBox.Ok)
         alert.exec_()
